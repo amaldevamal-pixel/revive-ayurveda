@@ -1,12 +1,18 @@
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   // IMPORTANT: change to your REAL domain
   metadataBase: new URL("https://reviveayurveda.in"),
 
+  // ✅ ADD THIS BLOCK
+  verification: {
+    google: "0-_1swm-p5IG2XMHVsnLb8DbEqwu1G1jjyT1XoE1Zl8",
+  },
+  
   title: {
     default: "Revive Ayurveda Munroe Island",
     template: "%s | Revive Ayurveda Munroe Island",
@@ -74,6 +80,9 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+
+        {/* ✅ GOOGLE ANALYTICS */}
+        <GoogleAnalytics gaId="G-T8D66L5SNV" />
       </body>
     </html>
   );
