@@ -1,5 +1,6 @@
 
 import { whatsappLink } from "@/lib/whatsapp";
+import { Instagram } from "lucide-react";
 export default function Footer() {
 
     const footerMessage = `
@@ -69,14 +70,33 @@ Please share details and booking information.
 
     <li>
       📧 <a
-        href="mailto:reviveayurveda@gmail.com"
+        href="mailto:care@reviveayurveda.in"
         className="hover:text-white underline-offset-2 hover:underline"
       >
-        reviveayurveda@outlook.in
+        care@reviveayurveda.in
       </a>
     </li>
 
-   
+<a
+  href="https://www.instagram.com/reviveayurvedamundro?utm_source=qr&igsh=a2hmNGwwdWNnN3pw"
+  target="_blank"
+  rel="me noopener noreferrer"
+  className="
+    flex items-center gap-2
+    px-3 py-2
+    rounded-full
+    bg-white/10
+    backdrop-blur
+    text-white
+    hover:bg-gradient-to-r
+    hover:from-pink-500
+    hover:to-purple-500
+    transition-all duration-300
+  "
+>
+  <Instagram size={18} />
+  <span className="text-sm">Instagram</span>
+</a>
 
   </ul>
 </div>
@@ -100,6 +120,8 @@ Please share details and booking information.
               WhatsApp Now
             </a>
 
+
+
           </div>
 
         </div>
@@ -118,6 +140,7 @@ Please share details and booking information.
         </div>
 
       </div>
+      
     </footer>
   );
 }
