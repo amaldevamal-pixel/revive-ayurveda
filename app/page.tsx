@@ -8,6 +8,7 @@ import WhyUsSection from "@/components/WhyUsSection";
 import AboutExperience from "@/components/AboutExperience";
 import ReviewsSection from "@/components/ReviewsSection";
 import LocationSection from "@/components/LocationSection";
+import ManagerContactSection from "@/components/ManagerContactSection";
 
 
 /* ================= SEO METADATA ================= */
@@ -79,8 +80,8 @@ export default function Home() {
       <WhyUsSection />
 
       <AboutExperience />
-
       <ReviewsSection />
+      <ManagerContactSection />
 
       <LocationSection />
     </>

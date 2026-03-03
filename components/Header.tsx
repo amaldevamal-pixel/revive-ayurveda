@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 import { whatsappLink } from "@/lib/whatsapp";
 
 export default function Header() {
@@ -19,7 +19,7 @@ const headerMessage =
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <Image
               src="/logo.png"
               alt="Revive Ayurveda Logo"
@@ -30,7 +30,7 @@ const headerMessage =
             <span className="text-lg font-semibold text-[var(--primary)]">
               Revive Ayurveda
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-8 text-sm font-medium text-gray-700">
@@ -39,6 +39,7 @@ const headerMessage =
             <a href="#about">About</a>
             <a href="#reviews">Reviews</a>
             <a href="#location">Location</a>
+            <a href="#contact">Contact</a>
           </nav>
 
           {/* Desktop CTA */}
@@ -82,6 +83,7 @@ rel="noopener noreferrer"
             <a href="#about">About</a>
             <a href="#reviews">Reviews</a>
             <a href="#location">Location</a>
+            <a href="#contact">Contact</a>
 
             <a
               href={whatsappLink(headerMessage)}
